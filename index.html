@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrivar - Sostenibilità</title>
+
+<!--Importazione Font e collegamento al file CSS-->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Fraunces:opsz,wght@9..144,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+
+<!--Header con logo azienda e menu-->
+  <header>
+    <a href="#"> <img src="logo.png" alt="Logo Agrivar" class="logo-azienda">
+    </a> <nav>
+      <ul>
+        <li><a href="#home">Home</a></li> <!--Permettono di andare direttamente a sezioni interne della pagina-->
+        <li><a href="#chisiamo">Chi siamo</a></li>
+        <li><a href="#coltivazioni">Coltivazioni</a></li>
+        <li><a href="#sostenibilita">Sostenibilità</a></li>
+        <li><a href="#report">Report</a></li>
+      </ul>
+    </nav>
+  <button id="theme-toggle" class="theme-btn" title="Cambia modalità luce/dark">
+  <span class="icon">🌙</span>
+</button>
+  </header>
+
+  <main>
+
+<!--Divisione delle varie sezioni-->
+      <div class="hero-banner">
+      </div>
+    <div class="contenitore-testo"> <!--Permette di avere uno sfondo diverso dietro il testo-->
+  <section id="home">
+    <h2>Benvenuti in Agrivar</h2>
+    <p>Agrivar è un'azienda agricola sulle colline bolognesi impegnata nella valorizzazione del territorio
+    e nella sostenibilità ambientale, unendo l'antica sapienza contadina con le più moderne tecniche di agricoltura di precisione.
+    Per saperne di più, visita il nostro
+    <a href="https://www.agrivar.com/" target="_blank" style="color: inherit;">sito web ufficiale Agrivar</a>
+    </p>
+  </section>
+    </div>
+
+    <div class="contenitore-testo">
+  <section id="chisiamo">
+    <h2>Chi siamo</h2>
+    <p>Siamo nati con la missione di recuperare e valorizzare il patrimonio agricolo e paesaggistico del nostro territorio.
+      Crediamo in un modello di agricoltura che rispetta la terra, promuove la biodiversità e garantisce prodotti di eccellenza,
+      tracciabili e orientati al benessere e alla salute del consumatore.</p>
+    <p>Il nostro lavoro si basa sull'innovazione continua e sull'utilizzo delle migliori tecnologie di precisione. Non siamo solo produttori,
+      siamo custodi di un territorio e promotori di una filiera corta e interamente sostenibile che garantisce la massima qualità.</p>
+  </section>
+    </div>
+
+<!--Organizzazione della sezione "le nostre coltivazioni" con cinque card-->
+  <section id="coltivazioni">
+    <h2>Le nostre coltivazioni</h2>
+    <div class="coltivazioni-lista">
+<!--Uso un contenitore div per ogni card per avere un testo e un'immagine in ognuna-->
+      <div class="card-coltivazioni">
+        <img src="oliveto.jpg" alt="Foto Oliveto" class="card-icona">
+        <div class="card-contenuto">
+        <h3>Oliveto</h3><p>L’oliveto nasce nel 2016 per riportare la coltivazione dell’olivo sulla collina di Varignana, puntando su cultivar autoctone
+          dell’Emilia-Romagna e su un sistema intensivo e meccanizzato per ridurre i costi e ottimizzare le risorse. Le varietà principali includono Ghiacciola,
+          Nostrana di Brisighella e Correggiolo, allevate a palmetta per favorire la raccolta meccanica. Oggi l’oliveto si estende su 265 ettari con 12 varietà,
+          da cui si producono diversi oli extravergine di oliva mono e multicultivar, anche biologici.</p>
+        </div>
+      </div>
+
+      <div class="card-coltivazioni">
+        <img src="vigneto.jpg" alt="Foto Vigneto" class="card-icona">
+        <div class="card-contenuto">
+        <h3>Vigneto</h3><p>La vigna nasce nel 2017 con l’impianto di vitigni autoctoni emiliano-romagnoli e varietà internazionali, con l’obiettivo di selezionare e valorizzare le diverse cultivar.
+          Oggi il vigneto si estende su 50 ettari e comprende 7 varietà, da cui si producono spumanti Metodo Classico, vini bianchi e rossi di qualità. La vinificazione avviene interamente nella cantina aziendale inaugurata nel 2021,
+          dotata di tecnologie moderne, mentre la sala degustazione permette di assaggiare vini, oli EVO e prodotti del territorio.</p>
+        </div>
+      </div>
+
+      <div class="card-coltivazioni">
+        <img src="noccioleto-mandorleto.jpg" alt="Foto Noccioleto e Mandorleto" class="card-icona">
+        <div class="card-contenuto">
+        <h3>Noccioleto e mandorleto</h3><p>Un settore in rapida crescita dell’azienda è quello della frutta a guscio, in particolare mandorle e nocciole, coltivate su circa 7 ettari. La varietà principale è la Nocciola Gentile delle Langhe, utilizzata per degustazioni,
+          per il breakfast del Resort e dell’Agriturismo, come snack a km zero e nella preparazione di ricette e dolci dei ristoranti aziendali. Mandorle e nocciole arricchiscono così l’offerta di prodotti a km zero dell’azienda agricola.</p>
+        </div>
+      </div>
+
+      <div class="card-coltivazioni">
+        <img src="melograni-frutteti.jpg" alt="Foto Melograni e Frutteti" class="card-icona">
+        <div class="card-contenuto">
+        <h3>Melograni e Frutteti</h3><p>Frutteti autoctoni e melograno completano le colture aziendali. Questi sono sviluppati in parallelo all’intero progetto agricolo e oggi sono estesi su circa 30 ettari. Pesche, albicocche, susine, pere, mele e fichi sono consumati freschi o trasformati in succhi e frutta spalmabile.
+          I prodotti vengono serviti a colazione, nelle degustazioni di olio e vino e venduti nei punti vendita aziendali e del Resort.</p>
+        </div>
+      </div>
+
+      <div class="card-coltivazioni">
+        <img src="zafferano.jpg" alt="Foto Zafferano" class="card-icona">
+        <div class="card-contenuto">
+        <h3>Zafferano</h3><p>Tra le coltivazioni di punta dell’azienda c’è lo zafferano (Crocus sativus), coltivato su circa 2.000 mq e utilizzato nelle cucine dell’Agriturismo e del Resort di Palazzo di Varignana, oltre a essere venduto in eleganti confezioni regalo. La pianta fiorisce in autunno, quando il bulbo esce dalla dormienza,
+          producendo fiori viola dai quali si raccolgono manualmente i tre stimmi rossi, che una volta essiccati diventano la preziosa spezia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="contenitore-testo"> 
+  <section id="sostenibilita">
+    <h2>Il nostro impegno</h2>
+    <p>La sostenibilità per Agrivar è un impegno concreto che guida ogni scelta aziendale. Il modello di sviluppo si fonda su un equilibrio tra tutela ambientale,
+      responsabilità sociale e solidità economica, con l’obiettivo di creare valore duraturo per il territorio, le persone e la filiera.</p>
+<!--Schema sui 3 pilastri fondamentali dell'azienda-->
+    <div class="pilastri-sostenibilita">
+      <h2>Sostenibilità</h2>
+      <div class="schema-sostenibilita"> <!--Organizzazione della sezione "Schema della sostenibilità" con tre card -->
+        <div class="card-sostenibilita"><h3>🌍 Ambientale</h3>
+        <ul>
+          <li>256 ettari di superficie agricola, con 61% in biologico certificato.</li>
+          <li>160.000 olivi piantati per la tutela della biodiversità e del paesaggio.</li>
+          <li>33.000 m³ di consumo idrico gestito con irrigazione a goccia e sensori.</li>
+          <li>Pratiche di agricoltura di precisione e mitigazione del cambiamento climatico.</li>
+          <li>Uso prevalente di concimi naturali (>50%) e raccolta differenziata.</li>
+        </ul>
+        </div>
+        <div class="card-sostenibilita"><h3>👨‍🌾 Sociale</h3>
+        <ul>
+          <li>44 dipendenti, di cui 65% a tempo indeterminato.</li>
+          <li>Differenza retributiva uomo/donna pari a 1%.</li>
+          <li>Meno di 3 infortuni negli ultimi 5 anni.</li>
+          <li>2.193 ore di formazione su sicurezza e competenze.</li>
+          <li>Dialogo continuo con stakeholder e forte legame con la comunità locale.</li>
+        </ul>
+        </div>
+        <div class="card-sostenibilita"><h3>💶 Economica</h3>
+        <ul>
+          <li>Filiera agricola integrata e produzione a km 0.</li>
+          <li>Investimenti in innovazione, ricerca e sostenibilità.</li>
+          <li>Valorizzazione delle produzioni aziendali tramite Resort e mercato nazionale.</li>
+          <li>Collaborazioni di filiera e riutilizzo delle risorse per ridurre gli sprechi.</li>
+          <li>Donazioni, sponsorizzazioni e investimenti a sostegno dell’economia locale.</li>
+        </ul>
+        </div>
+    </div>
+    </div>
+  </section>
+    </div>
+
+  <!--Sezione per scaricare il "report di sostenibilità"-->
+    <div class="contenitore-testo"> 
+  <section id="report">
+    <h2>Scarica il report annuale per conoscere il nostro impegno per un futuro sostenibile</h2>
+    <a href="agrivar-report-sostenibilita.pdf" class="download-button" target="_blank" rel="noopener noreferrer">Scarica il Report</a>
+  </section>
+    </div>
+
+  </main>
+   <!--Footer-->
+  <footer>
+    ©2025 Agrivar
+  </footer>
+
+  </body>
+
+  <script>
+// Inserisco Javascript per scegliere tra modalità chiara e scura
+  const btn = document.getElementById("theme-toggle");
+  const body = document.body;
+  const icon = btn.querySelector(".icon");
+
+// Aggiorna l'icona in base alla modalità scelta
+  function updateIcon() {
+    if (body.classList.contains("dark-mode")) {
+      icon.textContent = "☀️";
+    } else {
+      icon.textContent = "🌙";
+    }
+  }
+
+  btn.onclick = () => {
+    body.classList.toggle("dark-mode");
+    const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
+    
+    updateIcon();
+  };
+</script>
+</html>

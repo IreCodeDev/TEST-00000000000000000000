@@ -1,0 +1,361 @@
+/* Stabilità stile pagina su mobile */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Palette colori modalità chiara */
+:root {
+  --principale: #2f6446;
+  --titoli: #97a6b8;
+  --testo: #97a6b8;
+  --titoli-card: #2f6446;
+  --sfondo: #ffffff;
+  --sfondo-contenitore: #f0eee5;
+ }
+
+/* Palette colori modalità scura */
+body.dark-mode {
+  --principale: #2f6446;
+  --titoli: #97a6b8;
+  --testo: #97a6b8;
+  --titoli-card: #85bd9a;
+  --sfondo: #121212;
+  --sfondo-contenitore:#292821;
+ }
+
+/* Combinazione per l'animazione del logo e traslazione per il centraggio visivo */
+@keyframes pulse {
+  0% { 
+        transform: scale(1) translateX(-5%);
+    } 
+  50% { 
+        transform: scale(1.02) translateX(-5%);
+    } 
+  100% { 
+        transform: scale(1) translateX(-5%);
+    }
+}
+
+/* Header + Logo azienda */
+header {
+  background-color: var(--sfondo);
+  text-align: center;
+  color: white;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+
+  /* Header fisso e compatto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Stile per tutti i paragrafi e il testo generale */
+body {
+  font-family: "Fraunces", serif;
+  font-size: 16px;
+  font-weight: 300;
+  background-color: var(--sfondo);
+  color: var(--testo);
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+/* Quando la dark-mode è attiva, l'immagine del logo cambia colore grazie ai filtri CSS */
+body.dark-mode .logo-azienda {
+    filter: brightness(0) saturate(100%) invert(33%) sepia(27%) saturate(712%) hue-rotate(93deg) brightness(93%) contrast(92%);
+}
+
+/* Colore di sfondo del testo */
+.contenitore-testo {
+  background-color: var(--sfondo-contenitore);
+  max-width: 1000px; 
+  margin: 30px auto 30px auto;
+}
+
+.logo-azienda {
+  width: 200px;
+  display: block;
+  margin: 0 auto 8px auto;
+  animation: pulse 2s infinite alternate;
+}
+
+/* Menu */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--testo);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--titoli)
+}
+
+/* Header fisso */
+main {
+  margin-top: 0px; /* Per non coprire con l'header fisso le varie sezioni */
+}
+
+html {
+/* Assicura che i link di navigazione si fermino sotto l'header fisso quando cliccati */
+  scroll-padding-top: 190px;
+  scroll-behavior: smooth;
+}
+
+/* Stile per l'Immagine in alto a tutta larghezza */
+.hero-banner {
+  height: 250px; 
+  width: 100%;
+  background-image: url('sfondo.jpg');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 150px;
+}
+
+/* Sezioni generali */
+section {
+  padding: 30px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Stile per i titoli principali h2 */
+h2 {
+  font-family: "Cinzel Decorative", serif; 
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 39px;
+  color: var(--titoli);
+  margin-bottom: 10px;
+}
+
+/* Posizione delle card "coltivazioni" in colonna e centrate */
+.coltivazioni-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 50px;
+  align-items: center;
+}
+
+.coltivazioni-lista .card-coltivazioni {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Personalizzazione delle card "coltivazioni" */
+.card-coltivazioni {
+  background-color: var(--sfondo-contenitore);
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 6px solid var(--principale);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Movimento card "coltivazioni" */
+}
+
+/* Stile per l'immagine */
+.card-icona {
+  width: 150px;
+  height: 150px;
+  margin-right: 25px;
+  flex-shrink: 0; 
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+/* Contenitore per il testo */
+.card-contenuto {
+  flex-grow: 1;
+}
+
+/* Stile sottotitoli h3 (utilizza lo stesso font e spessore dei titoli h2) */
+.card-sostenibilita h3 {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: normal; 
+  color: var(--titoli-card);
+  margin-top: 10px;
+}
+
+/* Personalizzazione delle card "sostenibilità" */
+.card-sostenibilita {
+  background-color: var(--sfondo-contenitore);
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 6px solid var(--principale);
+  color: var(--titoli-card);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Contenitore delle card "sostenibilità" */
+.pilastri-sostenibilita {
+  background-color: var(--sfondo);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+/* Posizione delle card "sostenibilità" orizzontalmente */
+.schema-sostenibilita {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 40px;
+}
+
+/* Stile per le liste nelle card "sostenibilità" */
+.card-sostenibilita ul {
+  list-style: disc;
+  padding-left: 20px;
+  text-align: left;
+  margin: 10px 0 0 0;
+}
+
+.card-sostenibilita li {
+  margin-bottom: 5px;
+  line-height: 1.4;
+}
+
+#report h2 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+/* Creazione di un "button" per scaricare il report */
+.download-button {
+  display: inline-block;
+  background-color: var(--titoli);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: var(--titoli-card);
+  transform: translateY(-2px);
+}
+
+/* Effetto sollevamento delle card (coltivazioni e sostenibilità) */
+.card-coltivazioni:hover, .card-sostenibilita:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* Aumenta l'ombra per dare effetto */
+}
+
+/* Footer */
+footer {
+  background-color: var(--principale);
+  text-align: center;
+  color: white;
+  padding: 25px 10px;
+  margin-top: 30px;
+}
+
+.theme-btn {
+  background: none;
+  border: 1px solid var(--titoli);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.theme-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(123, 166, 179, 0.1);
+}
+
+/* Responsività su mobile */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 240px;
+  }
+  header {
+    padding: 15px 10px;
+  }
+
+  .card-icona {
+    display: block;
+    margin: 0 auto 20px auto;
+    width: 130px;             
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .theme-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.1rem;
+  }
+
+  .contenitore-testo {
+    margin: 20px 10px;
+    max-width: calc(100% - 20px);
+  }
+
+  nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    padding: 8px;
+    display: inline-block;
+  }
+
+  .card-coltivazioni {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+}
