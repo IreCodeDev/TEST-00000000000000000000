@@ -167,6 +167,13 @@
   const btn = document.getElementById("theme-toggle");
   const body = document.body;
   const icon = btn.querySelector(".icon");
+  
+// Al caricamento della pagina, controllo se l'utente aveva già scelto il tema scuro
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    body.classList.add("dark-mode");
+    updateIcon(); // Aggiorno l'icona subito se è scuro
+  }
 
 // Aggiorna l'icona in base alla modalità scelta
   function updateIcon() {
@@ -177,11 +184,18 @@
     }
   }
 
+// Gestionr del click sul pulsante
   btn.onclick = () => {
     body.classList.toggle("dark-mode");
-    const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
-    
+
+// Salvo la scelta nel localStorage del browser così non si perde al refresh
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
     updateIcon();
   };
 </script>
 </html>
+
